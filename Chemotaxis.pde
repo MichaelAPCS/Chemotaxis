@@ -34,8 +34,18 @@ class Bacteria
 
   //lots of java!   
   void move() {
-    myX = myX + (int)(Math.random()*7)-3;
-    myY = myY + (int)(Math.random()*7)-3; 
+    if (mouseX > x) {
+    myX = myX + (int)(Math.random()*5)-1;
+    }
+    else {
+    myX = myX + (int)(Math.random()*5)-3;
+    }
+    if (mouseY>x) {
+      myY = myY + (int)(Math.random()*5)-1; 
+    }
+    else {
+      myY = myY + (int)(Math.random()*5)-3;
+    }
   }
   void show() {
     fill(0);
