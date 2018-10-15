@@ -1,3 +1,19 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class Chemotaxis extends PApplet {
+
 int[] number = new int[100];
 int counter2 = 0;
 PImage imgSeinf;
@@ -5,20 +21,20 @@ PImage imgNewm;
 PImage imgCosmo;
 int counter = 0;
 //declare bacteria variables here
-color c = color(197);
-color actual = color(197);
+int c = color(197);
+int actual = color(197);
 int x = 0;
 Bacteria[] sue;
 Bacteria[] tom;
 Bacteria[] newman;
-void setup() {
+public void setup() {
 
 
 for (int j = 1; j<=10; j++) {
   number[counter2] = j;
   counter2++;
 }
-  size(500, 500);
+  
   imageMode(CENTER);
 
   imgSeinf = loadImage("kramergood.jpg");
@@ -44,7 +60,7 @@ for (int j = 1; j<=10; j++) {
     newman[i] = new Bacteria(mouseX, mouseY, imgSeinf);
   }
 }
-void draw()
+public void draw()
 
 {
   background(255);
@@ -77,7 +93,7 @@ class Bacteria
   }
 
   //lots of java!
-  void move() {
+  public void move() {
     if (tom[1].myX > myX) {
       myX = myX + (int)(Math.random()*5)-1;
     } else {
@@ -99,7 +115,7 @@ class Bacteria
       myY = myY + (int)(Math.random()*5)-3;
     }
   }
-  void show() {
+  public void show() {
     fill(0);
     if (get(myX-3,myY-3)!=1){
     tint(255,150);
@@ -109,7 +125,7 @@ class Bacteria
     }
     image(myK, myX, myY, height/8, width/8);
   }
-  void getPoints() {
+  public void getPoints() {
     if (myX == sue[1].myX && myY == sue[1].myY ||myX == sue[2].myX && myY == sue[2].myY||myX == sue[5].myX && myY == sue[5].myY ) {
       counter += 1;
       myX = (int)(Math.random()*width);
@@ -119,8 +135,18 @@ class Bacteria
     //void check() {
     //  if myX
   }
-  void moveNewman() {
+  public void moveNewman() {
     myX = mouseX;
     myY = mouseY;
+  }
+}
+  public void settings() {  size(500, 500); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "Chemotaxis" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
   }
 }
