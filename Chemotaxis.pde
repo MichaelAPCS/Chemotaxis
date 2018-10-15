@@ -25,7 +25,7 @@ for (int j = 1; j<=10; j++) {
 
   imgNewm = loadImage("Jerry.jpg");
   imgCosmo = loadImage("newman.jpg");
-  //initialize bacteria variables here
+  
 
   sue = new Bacteria[100];
   tom = new Bacteria[2];
@@ -116,8 +116,7 @@ class Bacteria
       myY = (int)(Math.random()*height);
       number[10+ counter] = 10+counter;
     }
-    //void check() {
-    //  if myX
+    
   }
   void moveNewman() {
     myX = mouseX;
