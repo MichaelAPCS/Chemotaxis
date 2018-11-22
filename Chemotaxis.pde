@@ -23,6 +23,7 @@ for (int j = 1; j<=10; j++) {
 
   imgSeinf = loadImage("data/kramergood2.png");
 
+
   imgNewm = loadImage("data/Jerry3.png");
   imgCosmo = loadImage("data/newman.jpg");
   
@@ -47,7 +48,7 @@ for (int j = 1; j<=10; j++) {
 void draw()
 
 {
-  background(220);
+  background(255);
   //move and show the bacteria
   for (int i = 1; i < sue.length; i++)
   {
@@ -102,12 +103,13 @@ class Bacteria
   void show() {
     fill(0);
     if (get(myX-3,myY-3)!=1){
-    tint(220,150);
+    //tint(255,150);
     }
     else {
       tint(0);
     }
-    image(myK, myX, myY, height/8, width/8);
+    //image(myK, myX, myY, height/8, width/8);
+    image (myK ,myX, myY, 100, 100);
   }
   void getPoints() {
     if (myX == sue[1].myX && myY == sue[1].myY ||myX == sue[2].myX && myY == sue[2].myY||myX == sue[5].myX && myY == sue[5].myY ) {
