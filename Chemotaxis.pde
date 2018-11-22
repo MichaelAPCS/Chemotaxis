@@ -18,13 +18,13 @@ for (int j = 1; j<=10; j++) {
   number[counter2] = j;
   counter2++;
 }
-  size(500, 500);
+  size(1000, 1000);
   imageMode(CENTER);
 
   imgSeinf = loadImage("data/kramergood.jpg");
 
-  imgNewm = loadImage("data/Jerry.jpg");
-  imgCosmo = loadImage("data/newman.jpg");
+  imgNewm = loadImage("data/Jerry2.jpg");
+  imgCosmo = loadImage("data/newman2.jpg");
   
 
   sue = new Bacteria[100];
@@ -33,11 +33,11 @@ for (int j = 1; j<=10; j++) {
 
   for (int i = 0; i < (sue.length)/10; i++)
   {
-    sue[i] = new Bacteria(200, 200, loadImage("newman.jpg"));
+    sue[i] = new Bacteria(200, 200, loadImage("newman2.jpg"));
   }
   for (int i = 0; i < tom.length; i++)
   {
-    tom[i] = new Bacteria(100, 100, loadImage("Jerry.jpg"));
+    tom[i] = new Bacteria(100, 100, loadImage("Jerry3.jpg"));
   }
   for (int i = 0; i < newman.length; i++)
   {
