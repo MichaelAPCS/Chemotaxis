@@ -102,7 +102,7 @@ class Bacteria
   void show() {
     fill(0);
     if (get(myX-3,myY-3)!=1){
-    tint(255,150);
+    //tint(255,150);
     }
     else {
       tint(0);
