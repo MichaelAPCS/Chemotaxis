@@ -21,10 +21,10 @@ for (int j = 1; j<=10; j++) {
   size(500, 500);
   imageMode(CENTER);
 
-  imgSeinf = loadImage("kramergood.jpg");
+  imgSeinf = loadImage("data/kramergood.jpg");
 
-  imgNewm = loadImage("Jerry.jpg");
-  imgCosmo = loadImage("newman.jpg");
+  imgNewm = loadImage("data/Jerry.jpg");
+  imgCosmo = loadImage("data/newman.jpg");
   
 
   sue = new Bacteria[100];
