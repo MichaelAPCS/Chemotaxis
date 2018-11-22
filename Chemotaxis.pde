@@ -18,7 +18,7 @@ for (int j = 1; j<=10; j++) {
   number[counter2] = j;
   counter2++;
 }
-  size(1000, 1000);
+  size(600, 600);
   imageMode(CENTER);
 
   imgSeinf = loadImage("data/kramergood.jpg");
