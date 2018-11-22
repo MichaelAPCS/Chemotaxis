@@ -21,7 +21,7 @@ for (int j = 1; j<=10; j++) {
   size(600, 600);
   imageMode(CENTER);
 
-  imgSeinf = loadImage("data/kramergood.jpg");
+  imgSeinf = loadImage("data/kramergood2.png");
 
   imgNewm = loadImage("data/Jerry3.png");
   imgCosmo = loadImage("data/newman.jpg");
@@ -47,7 +47,7 @@ for (int j = 1; j<=10; j++) {
 void draw()
 
 {
-  background(255);
+  background(220);
   //move and show the bacteria
   for (int i = 1; i < sue.length; i++)
   {
@@ -102,7 +102,7 @@ class Bacteria
   void show() {
     fill(0);
     if (get(myX-3,myY-3)!=1){
-    //tint(255,150);
+    tint(220,150);
     }
     else {
       tint(0);
